@@ -35,9 +35,6 @@ class FooterLinks extends WP_Widget
         $slugId = $this->get_field_id("slug");
         $slugName = $this->get_field_name("slug");
 
-        // echo '<label for="' . $slugId . '">Category Slug</label><br>';
-        //echo '<textarea id="' . $slugId . '" name="' . $slugName .    '">' . $slug . '</textarea>';
-
         $args=array(
             'orderby' => 'name',
             'order' => 'ASC'
@@ -65,10 +62,8 @@ class FooterLinks extends WP_Widget
         $title = $instance["title"];
         $slug = $instance["slug"];
 
-        // The Query
         query_posts(  array ( 'category_name' => $slug, 'posts_per_page' => -1 ) );
 
-        // The Loop
         echo '<div id="nav_menu-3" class="fwidget et_pb_widget widget_nav_menu">';
         echo '<h4 class="title">'.$title.'</h4>';
         echo '<div class="menu-footer-links-container"><ul id="menu-footer-links" class="menu">';
@@ -79,7 +74,6 @@ class FooterLinks extends WP_Widget
         endwhile;
         echo '</ul></div></div>';
 
-        // Reset Query
         wp_reset_query();
     }
 }
