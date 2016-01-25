@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: FooterLinks
-Plugin URI: alien.in.ua
+Plugin URI: http://alien.in.ua/
 Description: Widget for showing links in footer
 Version: 1.0
 Author: Misha Burda
